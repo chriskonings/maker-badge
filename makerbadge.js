@@ -2,6 +2,40 @@ MakerBadge.prototype={
 
   constructor:MakerBadge,
 
+  init:function(settings){
+
+    //set properties
+    if(settings.id){
+      this.userId = settings.id
+    }
+
+    if(settings.position){
+      this.position=settings.position
+    }
+  
+    if(settings.theme){
+      this.theme= settings.theme;
+    }
+  
+    if(settings.name){
+      this.name=settings.name
+    }
+
+    if (settings.twitter){
+      this.twitter = settings.twitter
+    }
+    
+    //only using pic in theme 2
+    if(this.theme!=1){
+      if(settings.pic){
+        this.pic='<img width="30" style="border-radius:100%" src="'+settings.pic+'"/>&nbsp;&nbsp;'
+      }
+    }
+
+    //trigger the badge
+    this.run()
+  },
+
   run:function(){
     const body = document.querySelector('body');
     const container = document.createElement('div');
@@ -175,38 +209,14 @@ MakerBadge.prototype={
 function MakerBadge(settings){
 
   this.userId = ''
-  if (settings.id){
-    this.userId = settings.id
-  }
   this.position = 'right'
-  if (settings.position){
-    this.position=settings.position
-  }
-
   this.theme = 1
-  if (settings.theme){
-    this.theme= settings.theme;
-  }
-
   this.name=''
-  if (settings.name){
-    this.name=settings.name
-  }
-
   this.twitter = ''
-  if (settings.twitter){
-    this.twitter = settings.twitter
-  }
-
-  //only using pic in theme 2
   this.pic=''
-  if (this.theme != 1) {
-    if (settings.pic) {
-      this.pic = settings.pic;
-    }
-  }
 
-
-  this.run()
 }
+
+var MakerBadge = new MakerBadge()
+
 
