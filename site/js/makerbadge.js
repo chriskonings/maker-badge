@@ -105,7 +105,7 @@ MakerBadge.prototype={
     };
     request.send();
 
-    container.addEventListener('click', () => {
+    button.addEventListener('click', () => {
       container.classList.toggle('isOpen')
     })
     },
