@@ -1,0 +1,32 @@
+---
+---
+
+@import "normalise";
+@import "typography";
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import "highlighting";
+@import "utilities";
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.main {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.landing-header {
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+.footer {
+  margin-top: 2rem;
+  padding: 2rem;
+  text-align: center;
+}

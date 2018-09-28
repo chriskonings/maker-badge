@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body class="body">
+    <header class="header u-text-center">
+      <h1 class="landing-header">{{ page.title }}</h1>
+    </header>
+    <main class="main">
+      {{ content }}
+    </main>
+    <footer class="footer">
+      {{ page.footer }}
+    </footer>
+    <script src="js/makerbadge.js"></script>
+    <script>
+      MakerBadge.init({
+        id: '963619',
+        position: 'left', //left or right
+        theme: 3,
+        name:'Chris', //I wanted to just use my first name
+        twitter: 'chriskonings'
+        // pic:'https://pbs.twimg.com/profile_images/1032372310248972288/DWnViIum_400x400.jpg',//little profile pic used in theme 2
+      });
+    </script>
+  </body>
+</html>
