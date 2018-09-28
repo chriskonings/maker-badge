@@ -15,14 +15,42 @@ html {
   box-sizing: inherit;
 }
 
+.body {
+  background: #ea4965;
+}
+
 .main {
   max-width: 700px;
   margin: 0 auto;
 }
 
 .landing-header {
+  position: relative;
   font-size: 4rem;
   font-weight: 800;
+  letter-spacing: .3rem;
+  border: 4px solid;
+  padding: 1rem;
+  &::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #00000017;
+    display: block;
+    position: absolute;
+    left: -20px;
+    bottom: -20px;
+  }
+}
+
+.landing-header__text {
+  z-index: 5;
+  position: relative;
+}
+
+.landing-icon {
+  display: block;
+  margin: 0 auto;
 }
 
 .footer {

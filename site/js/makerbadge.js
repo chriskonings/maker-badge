@@ -129,7 +129,7 @@ MakerBadge.prototype={
           text-decoration: none;\
           font-weight: 800;}";
           const borderBxStyle = '.maker-badge, .maker-badge *,.maker-badge *:before,.maker-badge *:after{box-sizing: border-box;}'
-          const containerStyle = '.maker-badge{font-size:16px;font-family:helvetica;text-align:right;height:200px;min-width:160px;transition: all .3s ease;position:fixed;bottom:-160px;' + this.position + ':0;}';
+          const containerStyle = '.maker-badge{color:#2b2b2b;font-size:16px;font-family:helvetica;text-align:right;height:200px;min-width:160px;transition: all .3s ease;position:fixed;bottom:-160px;' + this.position + ':0;}';
           const contentStyle = '.maker-badge__content{text-align:center;font-size:.9rem;border: 2px solid #e8e8e8;background-color: #f7f7f7;padding:.5rem;display:block;background:#f7f7f7;height:100%;}'
           const buttonStyle = '.maker-badge__btn{display:inline-block;height:40px;line-height:40px;padding: 0 .5rem;cursor:pointer;border:2px solid #e8e8e8;border-bottom:0;background:#f7f7f7;}'
           const statsListStyle = '.maker-badge__stats{list-style: none;padding: 0;margin: .3rem 0;} .maker-badge__stats li {margin: .3rem 0}'
@@ -151,7 +151,7 @@ MakerBadge.prototype={
           text-decoration: none;\
           font-weight: 800;}";
           const borderBxStyle = '.maker-badge, .maker-badge *,.maker-badge *:before,.maker-badge *:after{box-sizing: border-box;}'
-          const containerStyle = '.maker-badge{font-size:16px;font-family:helvetica;text-align:right;height:200px;min-width:160px;transition: all .3s ease;position:fixed;bottom:-160px;'+this.position+':0;border-top-left-radius:6px;}';
+          const containerStyle = '.maker-badge{color:#2b2b2b;font-size:16px;font-family:helvetica;text-align:right;height:200px;min-width:160px;transition: all .3s ease;position:fixed;bottom:-160px;'+this.position+':0;border-top-left-radius:6px;}';
           const contentStyle = '.maker-badge__content{text-align:center;font-size:.9rem;border: 1px solid #eaeaea;padding:.5rem;display:block;background:#fdfdfd;height:100%;}'
           const buttonStyle = '.maker-badge__btn{display:flex;justify-content:center;align-items:center;height:40px;line-height:40px;padding: 0 .5rem;cursor:pointer;border:1px solid #eaeaea;border-bottom:0;background:#fdfdfd;border-top-left-radius:6px;color:#767676;}'
           const statsListStyle = '.maker-badge__stats{list-style: none;padding: 0;margin: .3rem 0;} .maker-badge__stats li {margin: .3rem 0}'
@@ -173,7 +173,7 @@ MakerBadge.prototype={
           text-decoration: none;\
           font-weight: 800;}";
           const borderBxStyle = '.maker-badge, .maker-badge *,.maker-badge *:before,.maker-badge *:after{box-sizing: border-box;}'
-          const containerStyle = '.maker-badge{font-size:16px;font-family:helvetica;text-align:' + this.position + ';height:200px;min-width:160px;transition: all .3s ease;position:fixed;bottom:-120px;'+this.position+':0;border-top-left-radius:6px;}';
+          const containerStyle = '.maker-badge{color:#2b2b2b;font-size:16px;font-family:helvetica;text-align:' + this.position + ';height:200px;min-width:160px;transition: all .3s ease;position:fixed;bottom:-120px;'+this.position+':0;border-top-left-radius:6px;}';
           const contentStyle = '.maker-badge__content{text-align:center;font-size:.9rem;border: 1px solid #eaeaea;padding:.5rem;display:block;background:#fdfdfd;height:100%;}'
           const buttonStyle = '.maker-badge__btn{\
                               display: inline-flex;\
