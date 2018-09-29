@@ -15,6 +15,9 @@
     <footer class="footer">
       {{ page.footer }}
     </footer>
+    <div class="landing-arrow">
+        <svg width="56" height="78" xmlns="http://www.w3.org/2000/svg"><path d="M26.9108 74.1046L4.8155 47.3957s-3.3487-3.1659.2851-3.1659h12.4515v-5.425V5.362s-.4972-1.8937 2.369-1.8937h17.5256c2.0545 0 2.0033 1.5793 2.0033 1.5793v38.3853h11.501c4.4234 0 1.0894 3.3267 1.0894 3.3267S33.2426 71.7064 30.6177 74.3312c-1.901 1.901-3.7069-.2266-3.7069-.2266z" fill="#FFF" fill-rule="nonzero" stroke="#000" stroke-width="5"/></svg>
+    </div>
     <script src="js/makerbadge.js"></script>
     <script>
       MakerBadge.init({
@@ -25,6 +28,15 @@
         twitter: 'chriskonings'
         // pic:'https://pbs.twimg.com/profile_images/1032372310248972288/DWnViIum_400x400.jpg',//little profile pic used in theme 2
       });
+      setTimeout(() => {
+        const badge = document.querySelector('.maker-badge');
+        if (badge) {
+          const arrow = document.querySelector('.landing-arrow');
+          console.log(badge)
+          badge.appendChild(arrow);
+          arrow.style = 'display:block;';
+        }
+      }, 2000);
     </script>
   </body>
 </html>

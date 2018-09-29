@@ -216,7 +216,7 @@ MakerBadge.prototype={
                                   left: 0;\
                                   bottom: 0;\
                                   transition: all .3s ease;\
-                                  border: 3px solid white;\
+                                  border: 3px solid #000;\
                                   margin: auto;}'
           this.style.innerHTML = buttonImgStyle + statsListStyle + borderBxStyle + containerStyle  + buttonStyle + profileLinkStyle + isOpenStyle + contentStyle;
       }

@@ -53,6 +53,25 @@ html {
   margin: 2rem auto;
 }
 
+.landing-arrow {
+  display: none;
+  transition: all .3s ease;
+  height: 70px;
+  width: 70px;
+  animation: updown 2s ease-in-out;
+  animation-iteration-count: infinite;
+  svg {transform: rotate(-35deg);}
+  position: absolute;
+  top: -55px;
+  right: 55px;
+}
+
+@keyframes updown{
+  0%   { transform: translate(0px) }
+  50%   { transform: translate(-10px, -10px) }
+  100% { transform: translateY(0px) }
+}
+
 .footer {
   margin-top: 2rem;
   padding: 2rem;
