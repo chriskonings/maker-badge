@@ -15,6 +15,18 @@ html {
   box-sizing: inherit;
 }
 
+a {
+  color: #fff;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.btn {
+  border: 2px solid #fff;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+}
+
 .body {
   background: #ea4965;
 }
