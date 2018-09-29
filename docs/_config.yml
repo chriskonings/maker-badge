@@ -24,8 +24,8 @@ github_username:  chriskonings
 markdown: kramdown
 highlighter: rouge
 sass:
-    sass_dir: _sass
-    style: compressed
+  sass_dir: _sass
+  style: compressed
 plugins:
   - jekyll-feed
 kramdown:
