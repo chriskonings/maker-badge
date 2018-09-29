@@ -188,7 +188,7 @@ MakerBadge.prototype={
                                 display: block;\
                                 position: absolute;\
                                 top: -10px;\
-                                left: 25px;\
+                                ' + this.position + ': 25px;\
                                 width: 0;\
                                 height: 0;\
                                 border-left: 10px solid transparent;\
