@@ -47,11 +47,14 @@ footer: A collaboration by <a href="http://twitter.com/chriskonings" target="_bl
 
 <h1 class="u-text-center" style="margin-top:6rem">2. Customise your badge (Beta):</h1>
 
-<div class="u-text-center" style="margin:3rem 0">
+<div class="u-text-center" style="margin:3rem 0 0">
   <img src="img/theme-one.png">
   <img src="img/theme-two.png">
   <img src="img/theme-three.png">
 </div>
+<p class="u-text-center"  style="margin:2rem 0 2rem">
+  Choose from 3 themes, and customise layout:
+</p>
 
 ```html
     <script>
