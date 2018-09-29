@@ -159,7 +159,14 @@ MakerBadge.prototype={
           this.style.innerHTML = buttonImgStyle + statsListStyle + borderBxStyle + containerStyle + contentStyle + buttonStyle + profileLinkStyle + isOpenStyle;
       }
       if (this.theme === 3) {
-        isOpenStyle = '.isOpen{bottom: calc(0px + 80px);}.isOpen .maker-badge__content{box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);}'
+        isOpenStyle = '.isOpen{\
+          bottom: calc(0px + 60px);}\
+          .isOpen .maker-badge__btn {\
+            margin-bottom: -20px;\
+          z-index: 99;}\
+          .isOpen .maker-badge__content{\
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);\
+          }'
         var profileLinkStyle = ".ph-btn{margin: 0 auto;\
           height: 30px; \
           width: 30px; \
