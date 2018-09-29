@@ -188,7 +188,7 @@ MakerBadge.prototype={
                                 display: block;\
                                 position: absolute;\
                                 top: -10px;\
-                                left: 25px;\
+                                ' + this.position + ': 25px;\
                                 width: 0;\
                                 height: 0;\
                                 border-left: 10px solid transparent;\
@@ -216,7 +216,7 @@ MakerBadge.prototype={
                                   left: 0;\
                                   bottom: 0;\
                                   transition: all .3s ease;\
-                                  border: 3px solid white;\
+                                  border: 3px solid #000;\
                                   margin: auto;}'
           this.style.innerHTML = buttonImgStyle + statsListStyle + borderBxStyle + containerStyle  + buttonStyle + profileLinkStyle + isOpenStyle + contentStyle;
       }
