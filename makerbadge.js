@@ -159,7 +159,7 @@ MakerBadge.prototype={
           this.style.innerHTML = buttonImgStyle + statsListStyle + borderBxStyle + containerStyle + contentStyle + buttonStyle + profileLinkStyle + isOpenStyle;
       }
       if (this.theme === 3) {
-        isOpenStyle = '.isOpen{bottom: calc(0px + 80px);}'
+        isOpenStyle = '.isOpen{bottom: calc(0px + 80px);}.isOpen .maker-badge__content{box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);}'
         var profileLinkStyle = ".ph-btn{margin: 0 auto;\
           height: 30px; \
           width: 30px; \
@@ -174,7 +174,26 @@ MakerBadge.prototype={
           font-weight: 800;}";
           const borderBxStyle = '.maker-badge, .maker-badge *,.maker-badge *:before,.maker-badge *:after{box-sizing: border-box;}'
           const containerStyle = '.maker-badge{color:#2b2b2b;font-size:16px;font-family:helvetica;text-align:' + this.position + ';height:200px;min-width:160px;transition: all .3s ease;position:fixed;bottom:-120px;'+this.position+':0;border-top-left-radius:6px;}';
-          const contentStyle = '.maker-badge__content{text-align:center;font-size:.9rem;border: 1px solid #eaeaea;padding:.5rem;display:block;background:#fdfdfd;height:100%;}'
+          const contentStyle = '.maker-badge__content{\
+                                position:relative;\
+                                text-align:center;\
+                                font-size:.9rem;\
+                                border: 1px solid #eaeaea;\
+                                padding:.5rem;\
+                                display:block;\
+                                background:#fdfdfd;\
+                                height:100%;}\
+                                .maker-badge__content::before{\
+                                content:"";\
+                                display: block;\
+                                position: absolute;\
+                                top: -10px;\
+                                left: 25px;\
+                                width: 0;\
+                                height: 0;\
+                                border-left: 10px solid transparent;\
+                                border-right: 10px solid transparent;\
+                                border-bottom: 10px solid #fff;';
           const buttonStyle = '.maker-badge__btn{\
                               display: inline-flex;\
                               justify-content: right;\
@@ -182,10 +201,11 @@ MakerBadge.prototype={
                               cursor: pointer;\
                               position: relative;\
                               text-align: center;\
-                              width: 80px;\
-                              height: 80px;\
+                              width: 50px;\
+                              height: 50px;\
+                              margin: 20px 10px;\
                               border-radius: 50%;}\
-                              .maker-badge__btn:hover .maker-badge__btn-img {transform:scale(1.1);}'
+                              .maker-badge__btn:hover .maker-badge__btn-img {transform:scale(1.1);box-shadow:0px 0px 10px rgba(0,0,0,0.5);}'
           const statsListStyle = '.maker-badge__stats{list-style: none;padding: 0;margin: .3rem 0;} .maker-badge__stats li {margin: .3rem 0}';
           const buttonImgStyle = '.maker-badge__btn-img {\
                                   border-radius: 50%;\
@@ -195,9 +215,10 @@ MakerBadge.prototype={
                                   right: 0;\
                                   left: 0;\
                                   bottom: 0;\
-                                  transition: transform .3s ease;\
+                                  transition: all .3s ease;\
+                                  border: 3px solid white;\
                                   margin: auto;}'
-          this.style.innerHTML = buttonImgStyle + statsListStyle + borderBxStyle + containerStyle + contentStyle + buttonStyle + profileLinkStyle + isOpenStyle;
+          this.style.innerHTML = buttonImgStyle + statsListStyle + borderBxStyle + containerStyle  + buttonStyle + profileLinkStyle + isOpenStyle + contentStyle;
       }
 
     }
