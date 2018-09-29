@@ -6,104 +6,66 @@ layout: landing
 footer: A collaboration by <a href="http://twitter.com/chriskonings" target="_blank">@chriskonings</a> & <a href="http://twitter.com/prototypr" target="_blank">@prototypr</a>
 ---
 
+<h1 class="landing-header u-text-center"><span class="landing-header__text">MakerBadge</span></h1>
+
+<h4 class="u-text-center">An open-source badge to grow your brand.</h4>
+
 <img src="img/mb-browser.gif" style="width:100%;    max-width: 450px;
     margin: 5rem auto;
     display: block;
     border: 4px solid black;
     border-radius: 5px;"/>
 
-<h1 class="landing-header u-text-center"><span class="landing-header__text">MakerBadge</span></h1>
-
-<h4 class="u-text-center">A customizable badge to help your users keep track of your maker activity.</h4>
-
 <!-- <svg class="landing-icon" width="160" height="94" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke-width="4"><rect stroke="#CDCDCD" x="2" y="29" width="156" height="63" rx="8"/><circle stroke="#000" fill="#000" fill-rule="nonzero" opacity=".1" cx="57.5" cy="45.5" r="33.5"/><circle stroke="#1D1D1D" fill="#FFF" fill-rule="nonzero" cx="57.5" cy="35.5" r="33.5"/></g></svg> -->
 
 
+<h1 class="u-text-center" style="margin-top:6rem">1. Get your badge:</h1>
+
+<p class="u-text-center"></p>
+
+```html
+    <!-- Download and insert makerbadge.js -->
+
+    <script src="makerbadge.js"></script>
+
+    <!-- Initialise MakerBadge with options -->
+    
+    <script>
+      MakerBadge.init({id: 'USERIDHERE'}); // Product Hunt ID 
+    </script>
+```
+
+<p class="u-text-center">
+  Your Product Hunt ID can be foud on your PH profile page (e.g. #309280). 
+</p>
+
 <div style="    text-align: center;
-    margin: 5rem auto;
+    margin: 3rem auto 8rem;
     display: block;">
-<a class="btn" href="js/makerbadge.js" download>Download</a>
+<a class="btn" href="js/makerbadge.js" download>Download MakerBadge.js</a>
 </div>
 
-<h3 class="u-text-center">Getting started:</h3>
+<h1 class="u-text-center" style="margin-top:6rem">2. Customise your badge (Beta):</h1>
 
-<h4 class="u-text-center">Follow these steps to get started:</h4>
-
-<h2 class="u-text-center">1</h2>
-
-<p class="u-text-center"><b>Download</b> and add the makerbadge.js to your project</p>
-
-```html
-  <body>
-    YOUR CONTENT
-    <!-- Insert before closing body tag -->
-    <script src="makerbadge.js"></script>
-  </body>
-```
-
-<h2 class="u-text-center">2</h2>
-
-<p class="u-text-center">Initialise MakerBadge</p>
-
-```html
-  <body>
-    YOUR CONTENT
-    <!-- Insert before closing body tag -->
-    <script src="makerbadge.js"></script>
-    <!-- Initialise MakerBadge with options -->
-    <script>
-      MakerBadge.init({id: 'USERIDHERE'}); // Product Hunt ID
-    </script>
-  </body>
-```
-
-<h2 class="u-text-center">3</h2>
-
-<p class="u-text-center">Customise</p>
-
-```html
-  <body>
-    YOUR CONTENT
-    <!-- Insert before closing body tag -->
-    <script src="makerbadge.js"></script>
-    <!-- Initialise MakerBadge with options -->
-    <script>
-      MakerBadge.init({
-        id: 'USERIDHERE', // Product Hunt ID
-        position: 'left', // left or right
-        name: 'CUSTOMNAME', // Use any name you want
-        twitter: '@yourusername' // Link to twitter
-      });
-    </script>
-  </body>
-```
-
-<h2 class="u-text-center">Choose a theme</h2>
-
-<div class="u-text-center">
+<div class="u-text-center" style="margin:3rem 0">
   <img src="img/theme-one.png">
   <img src="img/theme-two.png">
   <img src="img/theme-three.png">
 </div>
 
-<p class="u-text-center">Three themes to choose</p>
-
 ```html
-  <body>
-    YOUR CONTENT
-    <!-- Insert before closing body tag -->
-    <script src="makerbadge.js"></script>
-    <!-- Initialise MakerBadge with options -->
     <script>
-      MakerBadge.init({
+       MakerBadge.init({
         id: 'USERIDHERE', // Product Hunt ID
-        theme: 3 // 1, 2 or 3
+        theme: 3, // 3 Themes: 1, 2 or 3
+        name: 'CUSTOMNAME', // Use any name you want
+        twitter: '@yourusername' // Link to twitter
+        position: 'left', // left or right
       });
     </script>
-  </body>
 ```
 
-<h2 class="u-text-center">Contribute</h2>
+<h1 class="u-text-center" style="margin:6rem 0 3rem 0">Contribute</h1>
 
 <div class="u-text-center">
   <img height="100" src="img/github.svg"/>
