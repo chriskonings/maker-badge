@@ -2,7 +2,7 @@ MakerBadge.prototype={
 
   constructor:MakerBadge,
 
-  init:function(settings){
+  init:function(settings, callback){
 
     //set properties
     if(settings.id){
@@ -38,10 +38,11 @@ MakerBadge.prototype={
     }
 
     //trigger the badge
-    this.run()
+    //pass callback function for arrow to show after loaded
+    this.run(callback)
   },
 
-  run:function(){
+  run:function(callback){
     const body = document.querySelector('body');
     const container = document.createElement('div');
     const content = document.createElement('div');
@@ -110,6 +111,10 @@ MakerBadge.prototype={
           content.appendChild(customHTML)
         }
         body.appendChild(container);
+        //run callback to say everything has loaded
+        if(callback){
+          callback()
+        }
       } else {
         // We reached our target server, but it returned an error
       }
