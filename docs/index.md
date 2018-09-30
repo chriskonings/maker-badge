@@ -8,7 +8,7 @@ footer: A collaboration by <a href="http://twitter.com/chriskonings" target="_bl
 
 <h1 class="landing-header u-text-center"><span class="landing-header__text">MakerBadge</span></h1>
 
-<h4 class="u-text-center">An open-source badge to grow your brand.</h4>
+<h4 class="u-text-center">An open-source badge to put your mark on every project.</h4>
 
 <img src="img/mb-browser.gif" style="width:100%;    max-width: 450px;
     margin: 5rem auto;
