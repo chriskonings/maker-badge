@@ -25,6 +25,11 @@ MakerBadge.prototype={
       this.twitter = settings.twitter
     }
 
+    if(settings.customHTML){
+      this.customHTML = settings.customHTML
+    }
+
+
     //only using pic in theme 2
     if(this.theme!=1){
       if(settings.pic){
@@ -50,6 +55,9 @@ MakerBadge.prototype={
     twitter.target = "_blank"
     twitter.innerHTML = '<svg height="30" data-name="Logo — FIXED" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><path fill="none" d="M0 0h400v400H0z"/><path d="M153.62 301.59c94.34 0 145.94-78.16 145.94-145.94 0-2.22 0-4.43-.15-6.63A104.36 104.36 0 0 0 325 122.47a102.38 102.38 0 0 1-29.46 8.07 51.47 51.47 0 0 0 22.55-28.37 102.79 102.79 0 0 1-32.57 12.45 51.34 51.34 0 0 0-87.41 46.78A145.62 145.62 0 0 1 92.4 107.81a51.33 51.33 0 0 0 15.88 68.47A50.91 50.91 0 0 1 85 169.86v.65a51.31 51.31 0 0 0 41.15 50.28 51.21 51.21 0 0 1-23.16.88 51.35 51.35 0 0 0 47.92 35.62 102.92 102.92 0 0 1-63.7 22 104.41 104.41 0 0 1-12.21-.74 145.21 145.21 0 0 0 78.62 23" fill="#1da1f2"/></svg>'
     //set the style based on theme
+    const customHTML = document.createElement('div');
+    customHTML.innerHTML = this.customHTML;
+    
     this.setStyle()
 
     document.getElementsByTagName('head')[0].appendChild(this.style);
@@ -70,6 +78,7 @@ MakerBadge.prototype={
     request.setRequestHeader('Authorization','Bearer ' + 'c531da26873a8dc7ea8be6d7e519f296f5f521d2d756bf9862552b6ed5f5f161 ');
 
     var that= this
+    //@TODO: separate themes out into their own sections
     request.onload = function() {
       if (request.status >= 200 && request.status < 400) {
         const data = JSON.parse(request.responseText);
@@ -78,6 +87,7 @@ MakerBadge.prototype={
         const picEl = '<img width="' + userPicSize + '" class="maker-badge__btn-img" src="' + userPic + '"/>&nbsp;&nbsp;'
         const name = that.name ? that.name : data.user.name
         username.innerHTML = '@' + data.user.username;
+
         if (that.theme === 2) {
           button.innerHTML = picEl + 'by ' + name;
         } else if (that.theme === 3) {
@@ -85,15 +95,19 @@ MakerBadge.prototype={
         } else {
           button.innerHTML = 'by ' + name;
         }
+
         profileLink.href = data.user.profile_url;
         statsList.innerHTML = '<li><b>' + data.user.posts_count + '</b>' + ' posts</li>' +
         '<li><b>' + data.user.maker_of_count + '</b>' + ' products</li>' +
         '<li><b>' + data.user.followers_count + '</b>' + ' followers</li>';
         content.appendChild(profileLink)
         content.appendChild(username);
-        content.appendChild(statsList)
+        content.appendChild(statsList);
         if (that.twitter) {
           content.appendChild(twitter)
+        }
+        if (that.customHTML) {
+          content.appendChild(customHTML)
         }
         body.appendChild(container);
       } else {
@@ -242,9 +256,9 @@ function MakerBadge(settings){
   this.name=''
   this.twitter = ''
   this.pic=''
+  this.coffee=false
+  this.customHTML = ''
 
 }
 
 var MakerBadge = new MakerBadge()
-
-
