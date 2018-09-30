@@ -64,6 +64,7 @@ footer: A collaboration by <a href="http://twitter.com/chriskonings" target="_bl
         name: 'CUSTOMNAME', // Use any name you want
         twitter: '@yourusername' // Link to twitter
         position: 'left', // left or right
+        customHTML: '<div>' //custom embeds e.g. buy me a coffee
       });
     </script>
 ```
