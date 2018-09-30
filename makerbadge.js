@@ -58,7 +58,7 @@ MakerBadge.prototype={
     //set the style based on theme
     const customHTML = document.createElement('div');
     customHTML.innerHTML = this.customHTML;
-    
+
     this.setStyle()
 
     document.getElementsByTagName('head')[0].appendChild(this.style);
@@ -77,7 +77,7 @@ MakerBadge.prototype={
     const request = new XMLHttpRequest();
     request.open('GET', 'https://api.producthunt.com/v1/users/' + this.userId, true);
     request.setRequestHeader('Authorization','Bearer ' + 'c531da26873a8dc7ea8be6d7e519f296f5f521d2d756bf9862552b6ed5f5f161 ');
-
+    let containerHeight = 0;
     var that= this
     //@TODO: separate themes out into their own sections
     request.onload = function() {
@@ -111,6 +111,14 @@ MakerBadge.prototype={
           content.appendChild(customHTML)
         }
         body.appendChild(container);
+        containerHeight = container.clientHeight;
+        if (that.theme === 3) {
+          container.style.bottom = 'calc(-' + containerHeight + 'px + 80px)';
+        } else {
+          container.style.bottom = 'calc(-' + containerHeight + 'px + 40px)';
+        }
+        container.classList.add('transition');
+        container.style.visibility = 'visible';
         //run callback to say everything has loaded
         if(callback){
           callback()
@@ -125,12 +133,23 @@ MakerBadge.prototype={
     request.send();
 
     button.addEventListener('click', () => {
-      container.classList.toggle('isOpen')
+      if (container.classList.contains('isOpen')) {
+        if (that.theme === 3) {
+          container.setAttribute('style', 'visibility:visible;bottom:calc(-' + containerHeight + 'px + 80px)');
+        } else {
+          container.setAttribute('style', 'visibility:visible;bottom:calc(-' + containerHeight + 'px + 40px)');
+        }
+        container.classList.remove('isOpen')
+      } else {
+        container.setAttribute('style', 'visibility:visible;');
+        container.classList.add('isOpen')
+      }
     })
     },
 
     setStyle: function() {
-      let isOpenStyle = '.isOpen{bottom: calc(0px + 2.4rem);}'
+      let isOpenStyle = '.isOpen{bottom: 0;}'
+      const transitionStyle = '.transition {transition: all .3s ease}'
       this.style = document.createElement('style');
       this.style.type = 'text/css';
       //style 1 (default style)
@@ -148,12 +167,12 @@ MakerBadge.prototype={
           text-decoration: none;\
           font-weight: 800;}";
           const borderBxStyle = '.maker-badge, .maker-badge *,.maker-badge *:before,.maker-badge *:after{box-sizing: border-box;}'
-          const containerStyle = '.maker-badge{color:#2b2b2b;font-size:16px;font-family:helvetica;text-align:right;height:200px;min-width:160px;transition: all .3s ease;position:fixed;bottom:-160px;' + this.position + ':0;}';
+          const containerStyle = '.maker-badge{color:#2b2b2b;font-size:16px;font-family:helvetica;text-align:right;height:auto;min-width:160px;position:fixed;bottom:-100%;' + this.position + ':0;}';
           const contentStyle = '.maker-badge__content{text-align:center;font-size:.9rem;border: 2px solid #e8e8e8;background-color: #f7f7f7;padding:.5rem;display:block;background:#f7f7f7;height:100%;}'
           const buttonStyle = '.maker-badge__btn{display:inline-block;height:40px;line-height:40px;padding: 0 .5rem;cursor:pointer;border:2px solid #e8e8e8;border-bottom:0;background:#f7f7f7;}'
           const statsListStyle = '.maker-badge__stats{list-style: none;padding: 0;margin: .3rem 0;} .maker-badge__stats li {margin: .3rem 0}'
           const buttonImgStyle = '.maker-badge__btn-img {border-radius: 50%;}'
-          this.style.innerHTML = buttonImgStyle + statsListStyle + borderBxStyle + containerStyle + contentStyle + buttonStyle + profileLinkStyle + isOpenStyle;
+          this.style.innerHTML = transitionStyle + buttonImgStyle + statsListStyle + borderBxStyle + containerStyle + contentStyle + buttonStyle + profileLinkStyle + isOpenStyle;
       }
       //style option 2
       if (this.theme === 2) {
@@ -170,16 +189,16 @@ MakerBadge.prototype={
           text-decoration: none;\
           font-weight: 800;}";
           const borderBxStyle = '.maker-badge, .maker-badge *,.maker-badge *:before,.maker-badge *:after{box-sizing: border-box;}'
-          const containerStyle = '.maker-badge{color:#2b2b2b;font-size:16px;font-family:helvetica;text-align:right;height:200px;min-width:160px;transition: all .3s ease;position:fixed;bottom:-160px;'+this.position+':0;border-top-left-radius:6px;}';
+          const containerStyle = '.maker-badge{color:#2b2b2b;font-size:16px;font-family:helvetica;text-align:right;height:auto;min-width:160px;position:fixed;bottom:-100%;'+this.position+':0;border-top-left-radius:6px;}';
           const contentStyle = '.maker-badge__content{text-align:center;font-size:.9rem;border: 1px solid #eaeaea;padding:.5rem;display:block;background:#fdfdfd;height:100%;}'
           const buttonStyle = '.maker-badge__btn{display:flex;justify-content:center;align-items:center;height:40px;line-height:40px;padding: 0 .5rem;cursor:pointer;border:1px solid #eaeaea;border-bottom:0;background:#fdfdfd;border-top-left-radius:6px;color:#767676;}'
           const statsListStyle = '.maker-badge__stats{list-style: none;padding: 0;margin: .3rem 0;} .maker-badge__stats li {margin: .3rem 0}'
           const buttonImgStyle = '.maker-badge__btn-img {border-radius: 50%;}'
-          this.style.innerHTML = buttonImgStyle + statsListStyle + borderBxStyle + containerStyle + contentStyle + buttonStyle + profileLinkStyle + isOpenStyle;
+          this.style.innerHTML = transitionStyle + buttonImgStyle + statsListStyle + borderBxStyle + containerStyle + contentStyle + buttonStyle + profileLinkStyle + isOpenStyle;
       }
       if (this.theme === 3) {
         isOpenStyle = '.isOpen{\
-          bottom: calc(0px + 60px);}\
+          bottom: 0;}\
           .isOpen .maker-badge__btn {\
             margin-bottom: -20px;\
           z-index: 99;}\
@@ -199,7 +218,7 @@ MakerBadge.prototype={
           text-decoration: none;\
           font-weight: 800;}";
           const borderBxStyle = '.maker-badge, .maker-badge *,.maker-badge *:before,.maker-badge *:after{box-sizing: border-box;}'
-          const containerStyle = '.maker-badge{color:#2b2b2b;font-size:16px;font-family:helvetica;text-align:' + this.position + ';height:200px;min-width:160px;transition: all .3s ease;position:fixed;bottom:-120px;'+this.position+':0;border-top-left-radius:6px;}';
+          const containerStyle = '.maker-badge{visibility:hidden;color:#2b2b2b;font-size:16px;font-family:helvetica;text-align:' + this.position + ';height:auto;min-width:160px;position:fixed;bottom:-100%;'+this.position+':0;border-top-left-radius:6px;}';
           const contentStyle = '.maker-badge__content{\
                                 position:relative;\
                                 text-align:center;\
@@ -221,6 +240,7 @@ MakerBadge.prototype={
                                 border-right: 10px solid transparent;\
                                 border-bottom: 10px solid #fff;';
           const buttonStyle = '.maker-badge__btn{\
+                              transition: all .3s ease;\
                               display: inline-flex;\
                               justify-content: right;\
                               align-items: center;\
@@ -244,7 +264,7 @@ MakerBadge.prototype={
                                   transition: all .3s ease;\
                                   border: 3px solid #000;\
                                   margin: auto;}'
-          this.style.innerHTML = buttonImgStyle + statsListStyle + borderBxStyle + containerStyle  + buttonStyle + profileLinkStyle + isOpenStyle + contentStyle;
+          this.style.innerHTML = transitionStyle + buttonImgStyle + statsListStyle + borderBxStyle + containerStyle  + buttonStyle + profileLinkStyle + isOpenStyle + contentStyle;
       }
 
     }
