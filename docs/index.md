@@ -3,7 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 title: MakerBadge
 layout: landing
-footer: A collaboration by <a href="http://twitter.com/chriskonings" target="_blank">@chriskonings</a> & <a href="http://twitter.com/prototypr" target="_blank">@prototypr</a>
+footer: A collaboration by <a href="http://twitter.com/chriskonings" target="_blank">@chriskonings</a> & <a href="http://twitter.com/graeme_fulton" target="_blank">@graeme_fulton</a>
 ---
 
 <h1 class="landing-header u-text-center"><span class="landing-header__text">MakerBadge</span></h1>
