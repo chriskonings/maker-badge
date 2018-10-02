@@ -10,11 +10,7 @@ footer: A collaboration by <a href="http://twitter.com/chriskonings" target="_bl
 
 <h4 class="u-text-center">An open-source badge to put your mark on every project.</h4>
 
-<img src="img/mb-browser.gif" style="width:100%;    max-width: 450px;
-    margin: 5rem auto;
-    display: block;
-    border: 4px solid black;
-    border-radius: 5px;"/>
+<img src="img/mb-browser.gif" class="top-gif"/>
 
 <!-- <svg class="landing-icon" width="160" height="94" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke-width="4"><rect stroke="#CDCDCD" x="2" y="29" width="156" height="63" rx="8"/><circle stroke="#000" fill="#000" fill-rule="nonzero" opacity=".1" cx="57.5" cy="45.5" r="33.5"/><circle stroke="#1D1D1D" fill="#FFF" fill-rule="nonzero" cx="57.5" cy="35.5" r="33.5"/></g></svg> -->
 
@@ -30,14 +26,14 @@ footer: A collaboration by <a href="http://twitter.com/chriskonings" target="_bl
 </script>
 
 <!-- Initialise MakerBadge with options -->
-    
+
 <script>
-  MakerBadge.init({id: 'USERIDHERE'}); // Product Hunt ID 
+  MakerBadge.init({id: 'USERIDHERE'}); // Product Hunt ID
 </script>
 ```
 
 <p class="u-text-center">
-  Your Product Hunt ID can be foud on your PH profile page (e.g. #309280). 
+  Your Product Hunt ID can be foud on your PH profile page (e.g. #309280).
 </p>
 
 <div style="    text-align: center;
@@ -69,6 +65,13 @@ footer: A collaboration by <a href="http://twitter.com/chriskonings" target="_bl
       });
     </script>
 ```
+
+<div class="news">
+  <h2 class="news__title">NEWS</h2>
+  <h3>Sept 30 2018</h3>
+  <a href="https://www.producthunt.com/posts/makerbadge" target="_blank"><img class="product-hunt" src="img/product-hunt.png"/></a>
+  <p>We launched MakerBadge <b>September 30th 2018</b> on <a href="https://www.producthunt.com/posts/makerbadge" target="_blank">Product Hunt</a>, it received over <b>300</b> upvotes and earned <b>#2</b> Product of the Day! We have lots of ideas to push MakerBadge further and are excited for the future!</p>
+</div>
 
 <h1 class="u-text-center" style="margin:6rem 0 3rem 0">Contribute</h1>
 

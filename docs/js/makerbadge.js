@@ -51,6 +51,10 @@ MakerBadge.prototype={
     const username = document.createElement('div');
     const profileLink = document.createElement('a');
     const twitter = document.createElement('a');
+    const makerbadge = document.createElement('a');
+    makerbadge.style = "display:block;margin: 5px 0;font-size:10px;color:#d85637;text-decoration:none;font-weight:400;"
+    makerbadge.innerHTML = "Get your MakerBadge"
+    makerbadge.href = "https://makerbadge.app"
     twitter.style = "display:inline-block;"
     twitter.href = "https://twitter.com/"+this.twitter;
     twitter.target = "_blank"
@@ -110,6 +114,7 @@ MakerBadge.prototype={
         if (that.customHTML) {
           content.appendChild(customHTML)
         }
+        content.appendChild(makerbadge);
         body.appendChild(container);
         containerHeight = container.clientHeight;
         if (that.theme === 3) {
