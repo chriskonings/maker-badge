@@ -32,7 +32,7 @@ Use it in 2 steps:
 ```
 Your Product Hunt ID can be foud on your PH profile page (e.g. #309280). 
 
-<a href="js/makerbadge.js" download>Download MakerBadge.js</a>
+<a href="https://makerbadge.app/js/makerbadge.js" download>Download MakerBadge.js</a>
 
 ## 2. Customise your badge (Beta):
 
