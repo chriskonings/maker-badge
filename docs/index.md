@@ -8,7 +8,13 @@ footer: A collaboration by <a href="http://twitter.com/chriskonings" target="_bl
 
 <h1 class="landing-header u-text-center"><span class="landing-header__text">MakerBadge</span></h1>
 
-<h4 class="u-text-center">An open-source badge to put your mark on every project.</h4>
+<h4 class="u-text-center">
+  An open-source badge to put your mark on every project.
+  <br/>
+  <a class="u-text-center" href="https://www.producthunt.com/posts/makerbadge" target="_blank">
+    <img src="img/product-hunt-2.png" class="ph-badge">
+  </a>
+</h4>
 
 <img src="img/mb-browser.gif" class="top-gif"/>
 
