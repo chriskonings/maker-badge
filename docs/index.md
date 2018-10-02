@@ -24,15 +24,16 @@ footer: A collaboration by <a href="http://twitter.com/chriskonings" target="_bl
 <p class="u-text-center"></p>
 
 ```html
-    <!-- Download and insert makerbadge.js -->
+<!-- Insert makerbadge.js (download or use ☁️cloud version) -->
 
-    <script src="makerbadge.js"></script>
+<script src="http://makerbadge.s3.amazonaws.com/makerbadge.js">
+</script>
 
-    <!-- Initialise MakerBadge with options -->
+<!-- Initialise MakerBadge with options -->
     
-    <script>
-      MakerBadge.init({id: 'USERIDHERE'}); // Product Hunt ID 
-    </script>
+<script>
+  MakerBadge.init({id: 'USERIDHERE'}); // Product Hunt ID 
+</script>
 ```
 
 <p class="u-text-center">
