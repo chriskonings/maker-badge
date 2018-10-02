@@ -26,7 +26,7 @@ footer: A collaboration by <a href="http://twitter.com/chriskonings" target="_bl
 ```html
 <!-- Insert makerbadge.js (download or use ☁️cloud version) -->
 
-<script src="http://makerbadge.s3.amazonaws.com/makerbadge.js">
+<script src="//makerbadge.s3.amazonaws.com/makerbadge.js">
 </script>
 
 <!-- Initialise MakerBadge with options -->
