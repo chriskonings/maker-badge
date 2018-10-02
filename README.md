@@ -22,8 +22,7 @@ Use it in 2 steps:
 ```html
 <!-- Insert makerbadge.js (download or use ☁️cloud version) -->
 
-<script src="//makerbadge.s3.amazonaws.com/makerbadge.js">
-</script>
+<script src="//makerbadge.s3.amazonaws.com/makerbadge.js"></script>
 
 <!-- Initialise MakerBadge with options -->
     
